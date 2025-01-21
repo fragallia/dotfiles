@@ -67,7 +67,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git bundler docker-compose zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,16 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gitlogonelinepretty='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an %Cgreen%s" --date=short'
-alias glop=gitlogonelinepretty
-alias gitbranchclean='git remote prune origin && git branch --merged | egrep -v "(^\*|main|dev|master)" | xargs git branch -d'
-alias gitlogcurrentworkingdirectory='git log --oneline -- **/*'
-alias glcwd=gitlogcurrentworkingdirectory
-alias gprom='git pull --rebase origin master'
-alias hflabels='gh pr edit $(git rev-parse --abbrev-ref HEAD) --add-label "tribe: data-solutions" --add-label "squad: enablement"'
-alias assignme='gh pr edit $(git rev-parse --abbrev-ref HEAD) --add-assignee @me'
-alias pr-create='gh pr create && hflabels && assignme'
-alias need-dev='gh pr edit $(git rev-parse --abbrev-ref HEAD) --add-label "need-dev"'
 
 # These came from https://dev.to/joaovitor/exa-instead-of-ls-1onl
 alias l='exa'
