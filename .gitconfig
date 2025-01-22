@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Arturs Kreipans
+	email = 854953+fragallia@users.noreply.github.com
+[push]
+	autoSetupRemote = true
