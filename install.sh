@@ -25,7 +25,9 @@ cp ./.zshrc ~
 mv ~/.zshrc ~/.zshrc.bak
 
 sudo sh -c "$(wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- \
-    -t agnoster
+        -t agnoster
+
+sudo apt install exa
 
 # remove newly created zshrc
 rm -f ~/.zshrc
